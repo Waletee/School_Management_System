@@ -1,9 +1,0 @@
-.home {
-    background: url(./images/Dark-blue\ background.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-}
-.black-fill {
-    background: rgba(0,0,0,0.5);
-    min-height: 100vh;
-}
