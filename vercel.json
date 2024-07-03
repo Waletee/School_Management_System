@@ -5,7 +5,33 @@
     }
   },
   "routes": [
-    { "src": "/(.*)", "dest": "/api/index.php" },
-    { "src": "/api/css/styles.css", "dest": "/api/css/styles.css" }
+    { "src": "/api/(.*)", "dest": "/api/index.php" }
+  ],
+  "builds": [
+    { "src": "api/index.php", "use": "@vercel/php" },
+    { "src": "api/css/styles.css", "use": "@vercel/static" },
+    { "src": "api/images/Dark-blue_background.jpg", "use": "@vercel/static" },
+    { "src": "api/images/school_logo.png", "use": "@vercel/static" },
+    { "src": "api/school_logo.jpg", "use": "@vercel/static" }
+  ],
+  "headers": [
+    {
+      "source": "/api/css/styles.css",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/css"
+        }
+      ]
+    },
+    {
+      "source": "/api/images/(.*)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "image/png"
+        }
+      ]
+    }
   ]
 }
