@@ -4,27 +4,8 @@
       "runtime": "vercel-php@0.7.1"
     }
   },
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/api/index.php" }
-  ],
-  "headers": [
-    {
-      "source": "/api/css/(.*)",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/css"
-        }
-      ]
-    },
-    {
-      "source": "/api/images/(.*)",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "image/png" 
-        }
-      ]
-    }
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/index.php" },
+    { "src": "/css/styles.css", "dest": "/api/css/styles.css" }
   ]
 }
