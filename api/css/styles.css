@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-.home {
+.home, .login-body{
   background: url(../images/Dark-blue_background.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -142,9 +142,9 @@ section {
 --------------------------------------------------------------*/
 #about {
   width: 100%;
-  height: 60vh;
   background-size: cover;
   position: relative;
+  padding: 10px 0;
 }
 
 #about:before {
@@ -190,6 +190,12 @@ section {
     padding: 6px 18px;
   }
 }
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
 
 /*--------------------------------------------------------------
 # Counts
@@ -245,12 +251,12 @@ section {
 #footer {
   color: #37423b;
   font-size: 14px;
-  background: #eef0ef;
+  background: #e2e2e2;
 }
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: #f9faf9;
+  background: #eee;
 }
 
 #footer .footer-top .footer-contact {
@@ -409,4 +415,22 @@ section {
   background: #fff;
   color: #37423b;
   text-decoration: none;
+}
+
+
+/*--------------------------------------------------------------
+# Login
+--------------------------------------------------------------*/
+#login {
+  max-width: 500px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#login h3 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
 }
